@@ -42,14 +42,14 @@ const Products = () => {
     return (
         <>
             <h1 className="products-title">Produtos</h1>
+            <p className="p-title">Passe o mouse sobre a imagem</p>
             <div className="card" >
                 {producstList.map(item => {
                     return (
                         <div className="card-inner" key={item.nome}>
                             <div className="card-back">
-                                <span>{item.nome}</span>
-                                <span>{item.preco}</span>
-                                <span>{item.material}</span>
+                                <span className="card-item-name">{item.nome}</span>
+                                <span className="card-iem-price">R$ {item.preco}</span>
                             </div>
                             <div className="card-front">
                                 <img className="img-size" src={item.img} alt=""></img>
